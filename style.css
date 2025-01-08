@@ -1,0 +1,249 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* Body */
+body {
+  width: 100%;
+  max-width: 100vw;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1E1E2C;
+  overflow: hidden;
+}
+
+/* Chat Container */
+.chat-container {
+  width: 100%;
+  max-width: 1000px;
+  height: 90vh;
+  background-color: #2A2F3A;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;  /* Centering the container */
+}
+
+/* Chat Header */
+.chat-header {
+  background-color: #212734;
+  color: #FFFFFF;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+/* Chat Messages Section */
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  scrollbar-width: thin;
+  scrollbar-color: #6C757D transparent;
+}
+
+.chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background: #6C757D;
+  border-radius: 10px;
+}
+
+.ai-chat-box,
+.user-chat-box {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.ai-chat-box img,
+.user-chat-box img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.ai-chat-box .ai-chat-area,
+.user-chat-box .user-chat-area {
+  max-width: 70%;
+  padding: 13px 17px;
+  font-size: 17px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  border-radius: 12px;
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ai-chat-box .ai-chat-area {
+  background-color: #383E49;
+}
+
+.user-chat-box .user-chat-area {
+  background-color: #4C90E2;
+  color: #FFFFFF;
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end; /* Aligns the user chat box to the right */
+  gap: 10px;
+  align-items: flex-start;
+}
+
+/* User Image */
+.user-chat-box img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  order: 2;  /* Makes the image appear after the message */
+}
+
+/* Input Section */
+.prompt-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: #212734;
+  gap: 10px;
+}
+
+.prompt-area input {
+  flex: 1;
+  height: 45px;
+  background-color: #2A2F3A;
+  border: none;
+  border-radius: 25px;
+  padding: 0 20px;
+  color: #FFFFFF;
+  font-size: 20px;
+  outline: none;
+}
+
+.prompt-area input::placeholder {
+  color: #A3A9B3;
+}
+
+.prompt-area button {
+  width: 45px;
+  height: 45px;
+  background-color: #4C90E2;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.prompt-area button img {
+  width: 20px;
+  height: 20px;
+}
+
+.prompt-area button:hover {
+  transform: scale(1.1);
+  background-color: #377ABD;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .chat-container {
+    width: 95%;
+    height: 90vh;
+  }
+
+  .chat-header {
+    padding: 15px;
+    font-size: 20px;
+  }
+
+  .prompt-area input {
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .prompt-area button {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .chat-container {
+    width: 90%;
+    height: 85vh;
+  }
+
+  .chat-header {
+    padding: 15px;
+    font-size: 18px;
+  }
+
+  .prompt-area input {
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .prompt-area button {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chat-container {
+    width: 95%;
+    height: 80vh;
+  }
+
+  .chat-header {
+    font-size: 16px;
+  }
+
+  .prompt-area input {
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .prompt-area button {
+    width: 30px;
+    height: 30px;
+  }
+  /* New Media Query for 360px Screen Size */
+@media (max-width: 360px) {
+  .chat-container {
+    width: 100%;
+    height: 75vh;
+  }
+
+  .chat-header {
+    font-size: 14px;
+  }
+
+  .prompt-area input {
+    height: 28px;
+    font-size: 10px;
+  }
+
+  .prompt-area button {
+    width: 28px;
+    height: 28px;
+  }
+}
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat Bot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="chat-container">
+    <div class="chat-header">
+        Ijaba Chat Bot
+    </div>
+       <div class="chat-messages">
+           <div class="ai-chat-box">
+               <img src="genAI.png" alt="" id="aiImage" width="10%">
+               <div class="ai-chat-area">
+                   Hello! How Can I Help You Today?
+               </div>
+           </div>
+       </div>
+       <div class="prompt-area">
+           <input type="text" id="prompt" placeholder="Type your message...">
+           <button id="image">
+               <img src="img.svg" alt="">
+               <input type="file" accept="image/*" hidden>
+           </button>
+           <button id="submit">
+               <img src="submit.svg" alt="">
+           </button>
+       </div>
+   </div>
+   <script type="module" src="script.js"></script>
+
+</body>
+</html>
